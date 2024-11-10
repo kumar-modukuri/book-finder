@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./components/Dashboard.js";
+import About from "./pages/About/About.js";
+import Home from "./pages/Home/Home.js";
 
 function App() {
 	return (
-		<>
-			<Routes>
-				<Route exact path="/" element={<Dashboard />} />
-			</Routes>
-		</>
+		<Routes>
+			<Route exact path="/" element={<Home />} />
+			<Route path="/about" element={<About />} />
+		</Routes>
 	);
 }
 
