@@ -19,18 +19,20 @@ const About = () => {
 						<div className="about-text">
 							<h2 className="about-title fs-26 ls-1">About Book Finder</h2>
 							<p className="fs-17">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Accusamus dignissimos consequuntur vero commodi provident
-								maiores, iusto atque corrupti voluptate vel sequi consectetur
-								unde aliquam corporis saepe animi non, tempora reiciendis
-								molestias sed laudantium dolores. Assumenda aperiam fuga quo
-								voluptate commodi ullam aliquam expedita voluptas delectus.
+								Book Finder is a web application designed to help book
+								enthusiasts discover and explore books effortlessly. Using the
+								OpenLibrary API, Book Finder allows users to search for books by
+								title, author, or keywords and presents detailed information
+								about each book. Users can view book covers, authors,
+								descriptions, publication dates, and subjects—all in one place.
 							</p>
 							<p className="fs-17">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-								dicta, possimus inventore eveniet atque voluptatibus repellendus
-								aspernatur illo aliquam dignissimos illum. Commodi, porro omnis
-								dolore amet neque modi quas eum!
+								With a clean, user-friendly interface, Book Finder makes it
+								simple to: Discover new books on topics of interest Explore
+								authors and genres in depth View detailed book information,
+								including covers and descriptions Whether you're a student, an
+								avid reader, or someone looking for a quick read, Book Finder is
+								your go-to tool for discovering and learning more about books.
 							</p>
 						</div>
 					</div>

@@ -9,13 +9,14 @@ const HeroImg = () => {
 	const [searched, setSearched] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [books, setBooks] = useState([]);
+	const [msg, setMsg] = useState("Search Results will display here");
 
-	const URL = "http://openlibrary.org/search.json?title=";
+	const URL = "https://openlibrary.org/search.json?title=";
 
 	const handleSearch = async () => {
 		try {
 			if (searched === "") {
-				console.log("Empty");
+				setMsg("Search Something");
 			} else {
 				setLoading(true);
 				const response = await axios.get(URL + searched);
@@ -23,7 +24,7 @@ const HeroImg = () => {
 				if (response.data) {
 					setBooks(response.data.docs);
 				} else {
-					console.log("0 Results Found");
+					setMsg("0 Results Found");
 				}
 			}
 		} catch (error) {
@@ -54,9 +55,7 @@ const HeroImg = () => {
 				</div>
 			</div>
 			<div className="books-div">
-				{books.length === 0 && !loading && (
-					<p>Search Results will display here</p>
-				)}
+				{books.length === 0 && !loading && <p>{msg}</p>}
 				{loading ? (
 					<Spinner />
 				) : (
@@ -64,7 +63,7 @@ const HeroImg = () => {
 						return (
 							<Card
 								key={index}
-								id={val.key}
+								id={val.key.split("/")[2]}
 								cover={val.cover_i}
 								title={val.title}
 								author={val.author_name?.join(", ") || "Unknown Author"}

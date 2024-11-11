@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import NotFoundImage from "../../assets/cover_not_found.jpg";
 import "./CardStyles.css";
 
 const Card = (props) => {
+	const navigate = useNavigate();
+
 	const truncateText = (text, maxLength) => {
 		return text && text.length > maxLength
 			? text.substring(0, maxLength) + "..."
@@ -9,7 +12,7 @@ const Card = (props) => {
 	};
 
 	const handleClick = () => {
-		console.log("Extra Features");
+		navigate(`/book/${props.id}`);
 	};
 
 	return (
